@@ -22,8 +22,10 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Bread::Board" => "0.28"
   },
-  "TEST_REQUIRES" => {},
-  "VERSION" => "0.01",
+  "TEST_REQUIRES" => {
+    "Test::Exception" => 0
+  },
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -31,7 +33,8 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Bread::Board" => "0.28"
+  "Bread::Board" => "0.28",
+  "Test::Exception" => 0
 );
 
 

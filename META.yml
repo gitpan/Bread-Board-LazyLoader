@@ -2,7 +2,8 @@
 abstract: 'lazy loader for Bread::Board containers'
 author:
   - 'Roman Daniel <roman.daniel@davosro.cz>'
-build_requires: {}
+build_requires:
+  Test::Exception: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -14,4 +15,4 @@ meta-spec:
 name: Bread-Board-LazyLoader
 requires:
   Bread::Board: 0.28
-version: 0.01
+version: 0.02
