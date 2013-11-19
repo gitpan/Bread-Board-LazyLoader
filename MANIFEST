@@ -1,0 +1,13 @@
+Changes
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+README.md
+dist.ini
+lib/Bread/Board/LazyLoader.pm
+lib/Bread/Board/LazyLoader/Container.pm
+t/001-basic.t
+t/001-exceptions.t
+t/Utils.pm
