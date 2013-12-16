@@ -1,6 +1,6 @@
 package Bread::Board::LazyLoader::Container;
 {
-  $Bread::Board::LazyLoader::Container::VERSION = '0.02';
+  $Bread::Board::LazyLoader::Container::VERSION = '0.03';
 }
 use Moose::Role;
 
@@ -63,7 +63,7 @@ Bread::Board::LazyLoader::Container - building subcontainers lazily
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 AUTHOR
 

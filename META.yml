@@ -15,4 +15,4 @@ meta-spec:
 name: Bread-Board-LazyLoader
 requires:
   Bread::Board: 0.28
-version: 0.02
+version: 0.03
