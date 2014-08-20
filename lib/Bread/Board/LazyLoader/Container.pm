@@ -1,7 +1,5 @@
 package Bread::Board::LazyLoader::Container;
-{
-  $Bread::Board::LazyLoader::Container::VERSION = '0.03';
-}
+$Bread::Board::LazyLoader::Container::VERSION = '0.04';
 use Moose::Role;
 
 # ABSTRACT: building subcontainers lazily
@@ -55,15 +53,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 Bread::Board::LazyLoader::Container - building subcontainers lazily
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 AUTHOR
 

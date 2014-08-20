@@ -1,7 +1,5 @@
 package Bread::Board::LazyLoader;
-{
-  $Bread::Board::LazyLoader::VERSION = '0.03';
-}
+$Bread::Board::LazyLoader::VERSION = '0.04';
 use Moose;
 
 # ABSTRACT: lazy loader for Bread::Board containers
@@ -59,6 +57,34 @@ sub add_code {
     ref($code) eq 'CODE'
         or croak "\$builder->add_code( CODEREF, [ \$under ])\n";
     $this->_add( [ code => $code ], $where );
+}
+
+sub add_tree {
+    my ( $this, $dir, $extension, $where ) = @_;
+
+    $this->_add_tree( $dir, $extension,
+        defined $where && $where =~ m{[^/]} ? $where : '' );
+}
+
+sub _add_tree {
+    my ( $this, $dir, $extension, $where ) = @_;
+
+    opendir( my $dh, $dir ) or die "can't opendir $dir: $!";
+    for my $basename ( grep { /[^\.]/ } readdir($dh) ) {
+        my $path = "$dir/$basename";
+        if ( -f $path ) {
+            if ( my ($name) = $basename =~ /(.*)\Q.$extension\E$/ ) {
+                $this->add_file( $path,
+                    !$where && $name eq $this->name
+                    ? ()
+                    : "$where/$name"  );
+            }
+        }
+        elsif ( -d $path ) {
+            $this->_add_tree( $path, $extension, "$where/$basename");
+        }
+    }
+    closedir $dh;
 }
 
 sub build {
@@ -131,15 +157,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 Bread::Board::LazyLoader - lazy loader for Bread::Board containers
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -289,6 +313,15 @@ Optional second parameter is is a path to nested container.
 
 Similar to add_file, but the anonymous subroutine is passed directly
 not loaded from a file.
+
+=item C<add_tree(DIR, EXTENSION, [ UNDER ])>
+
+Adds all files under directory with given extension (without leading .) to
+builder.
+
+Having files C<./IOC/Root.ioc>, C<./IOC/Database.ioc>, C<./IOC/WebServices/REST.ioc>
+then C<< $loader->add('./IOC', 'ioc') >> adds first file into current container 
+(if its name is Root), the other files cause subcontainers to be created.
 
 =item C<build>
 

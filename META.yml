@@ -5,14 +5,14 @@ author:
 build_requires:
   Test::Exception: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
+  ExtUtils::MakeMaker: 0
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Bread-Board-LazyLoader
 requires:
-  Bread::Board: 0.28
-version: 0.03
+  Bread::Board: 0.32
+version: 0.04
