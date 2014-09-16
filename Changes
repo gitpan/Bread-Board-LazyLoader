@@ -1,5 +1,9 @@
 Revision history for Bread::Board::LazyLoader
 
+0.05 Tuesday, Sep. 16th 2014 
+
+- added Bread::Board::LazyLoader::Site and Bread::Board::LazyLoader::Supersite modules
+
 0.04 Wednesday, Aug. 20th 2014 
 
 - added add_tree method
