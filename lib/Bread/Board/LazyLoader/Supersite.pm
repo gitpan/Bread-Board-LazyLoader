@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader::Supersite;
-$Bread::Board::LazyLoader::Supersite::VERSION = '0.05';
+$Bread::Board::LazyLoader::Supersite::VERSION = '0.06';
 use strict;
 use warnings;
 
@@ -106,7 +106,7 @@ Bread::Board::LazyLoader::Supersite - loads the proper site with your Bread::Boa
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 

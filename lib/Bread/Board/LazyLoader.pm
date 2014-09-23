@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader;
-$Bread::Board::LazyLoader::VERSION = '0.05';
+$Bread::Board::LazyLoader::VERSION = '0.06';
 use Moose;
 
 # ABSTRACT: lazy loader for Bread::Board containers
@@ -163,7 +163,7 @@ Bread::Board::LazyLoader - lazy loader for Bread::Board containers
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
