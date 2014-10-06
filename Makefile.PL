@@ -20,12 +20,13 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Bread::Board::LazyLoader",
   "PREREQ_PM" => {
-    "Bread::Board" => "0.32"
+    "Bread::Board" => "0.32",
+    "Module::Find" => 0
   },
   "TEST_REQUIRES" => {
     "Test::Exception" => 0
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.07",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -34,6 +35,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Bread::Board" => "0.32",
+  "Module::Find" => 0,
   "Test::Exception" => 0
 );
 

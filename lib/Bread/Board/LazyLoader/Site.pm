@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader::Site;
-$Bread::Board::LazyLoader::Site::VERSION = '0.06';
+$Bread::Board::LazyLoader::Site::VERSION = '0.07';
 use strict;
 use warnings;
 
@@ -84,7 +84,7 @@ Bread::Board::LazyLoader::Site - loads tree of IOC files alongside pm file
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
