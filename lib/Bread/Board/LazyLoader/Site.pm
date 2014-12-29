@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader::Site;
-$Bread::Board::LazyLoader::Site::VERSION = '0.07';
+$Bread::Board::LazyLoader::Site::VERSION = '0.08';
 use strict;
 use warnings;
 
@@ -62,11 +62,14 @@ sub _build {
 
     return {
         loader => sub {
-            my $loader = $base? $base->loader: Bread::Board::LazyLoader->new;
+            my $loader = Bread::Board::LazyLoader->new;
             $loader->add_tree( $dir, $suffix );
             return $loader;
         },
-        root => sub { shift()->loader->build },
+        root => sub {
+            my $this = shift;
+            return $this->loader->build( $base ? $base->root(@_) : @_ );
+        },
     };
 }
 
@@ -78,13 +81,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Bread::Board::LazyLoader::Site - loads tree of IOC files alongside pm file
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -128,10 +133,6 @@ When used import into caller two class methods
 Returns Bread::Board container with the structure of sub containers loaded
 lazily from a directory tree.
 
-=item C<loader>
-
-Returns Bread::Board::LazyLoader object with all container files found 
-
 =back
 
 =head2 import parameters
@@ -161,7 +162,7 @@ Roman Daniel <roman.daniel@davosro.cz>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Roman Daniel.
+This software is copyright (c) 2014 by Roman Daniel.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

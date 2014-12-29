@@ -3,17 +3,17 @@ abstract: 'lazy loader for Bread::Board containers'
 author:
   - 'Roman Daniel <roman.daniel@davosro.cz>'
 build_requires:
-  Test::Exception: 0
+  Test::Exception: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 0
+  ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.132830'
+generated_by: 'Dist::Zilla version 5.029, CPAN::Meta::Converter version 2.143240'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Bread-Board-LazyLoader
 requires:
-  Bread::Board: 0.32
-  Module::Find: 0
-version: 0.07
+  Bread::Board: '0.32'
+  Module::Find: '0'
+version: '0.08'
