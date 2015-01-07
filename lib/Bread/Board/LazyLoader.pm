@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader;
-$Bread::Board::LazyLoader::VERSION = '0.08';
+$Bread::Board::LazyLoader::VERSION = '0.09';
 use Moose;
 
 # ABSTRACT: lazy loader for Bread::Board containers
@@ -215,7 +215,7 @@ Bread::Board::LazyLoader - lazy loader for Bread::Board containers
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -387,7 +387,7 @@ Roman Daniel <roman.daniel@davosro.cz>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Roman Daniel.
+This software is copyright (c) 2015 by Roman Daniel.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

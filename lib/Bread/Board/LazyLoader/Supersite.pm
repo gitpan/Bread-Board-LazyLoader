@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader::Supersite;
-$Bread::Board::LazyLoader::Supersite::VERSION = '0.08';
+$Bread::Board::LazyLoader::Supersite::VERSION = '0.09';
 use strict;
 use warnings;
 
@@ -59,11 +59,11 @@ sub _load_file_site {
     };
 }
 
-# the variable may contain more than one site (either module or file) separated by colon
+# the variable may contain more than one site (either module or file) separated by semicolon
 sub _load_var_sites {
     my ($content) = @_;
 
-    my @content = split /:/, $content;
+    my @content = split /;/, $content;
     return
         map { m{/} ? _load_file_site($_) : _load_module_site($_); } @content;
 }
@@ -149,7 +149,7 @@ Bread::Board::LazyLoader::Supersite - loads the proper IOC root with your Bread:
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -174,7 +174,7 @@ Roman Daniel <roman.daniel@davosro.cz>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Roman Daniel.
+This software is copyright (c) 2015 by Roman Daniel.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader::Site;
-$Bread::Board::LazyLoader::Site::VERSION = '0.08';
+$Bread::Board::LazyLoader::Site::VERSION = '0.09';
 use strict;
 use warnings;
 
@@ -89,7 +89,7 @@ Bread::Board::LazyLoader::Site - loads tree of IOC files alongside pm file
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -162,7 +162,7 @@ Roman Daniel <roman.daniel@davosro.cz>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Roman Daniel.
+This software is copyright (c) 2015 by Roman Daniel.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

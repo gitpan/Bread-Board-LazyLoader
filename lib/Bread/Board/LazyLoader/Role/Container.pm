@@ -1,5 +1,5 @@
 package Bread::Board::LazyLoader::Role::Container;
-$Bread::Board::LazyLoader::Role::Container::VERSION = '0.08';
+$Bread::Board::LazyLoader::Role::Container::VERSION = '0.09';
 use Moose::Role;
 
 # ABSTRACT: building subcontainers lazily
@@ -61,7 +61,7 @@ Bread::Board::LazyLoader::Role::Container - building subcontainers lazily
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 AUTHOR
 
@@ -69,7 +69,7 @@ Roman Daniel <roman.daniel@davosro.cz>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Roman Daniel.
+This software is copyright (c) 2015 by Roman Daniel.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

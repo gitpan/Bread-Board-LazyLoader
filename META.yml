@@ -16,4 +16,4 @@ name: Bread-Board-LazyLoader
 requires:
   Bread::Board: '0.32'
   Module::Find: '0'
-version: '0.08'
+version: '0.09'
